@@ -27,10 +27,17 @@ document.getElementById('tbody').innerHTML+=carHtml
 function moveCar(id,positionPercentage){
     document.getElementById(id).style.paddingLeft-=1;
 }
-function carLeft(id){
+function carLeft(){
     currentPadding=document.getElementsByClassName('progressBar')[0].style.paddingLeft;
     currentPadding=currentPadding.slice(0,currentPadding.length-2)
     currentPadding-=5;
+
+document.getElementsByClassName('progressBar')[0].style.paddingLeft=String(currentPadding)+'px'
+}
+function carRight(){
+    currentPadding=document.getElementsByClassName('progressBar')[0].style.paddingLeft;
+    currentPadding=currentPadding.slice(0,currentPadding.length-2)
+    currentPadding+=5;
 
 document.getElementsByClassName('progressBar')[0].style.paddingLeft=String(currentPadding)+'px'
 }
