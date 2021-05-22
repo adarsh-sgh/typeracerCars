@@ -29,14 +29,14 @@ function moveCar(id,positionPercentage){
 }
 function carLeft(){
     currentPadding=document.getElementsByClassName('progressBar')[0].style.paddingLeft;
-    currentPadding=currentPadding.slice(0,currentPadding.length-2)
+    currentPadding=+currentPadding.slice(0,currentPadding.length-2)
     currentPadding-=5;
 
 document.getElementsByClassName('progressBar')[0].style.paddingLeft=String(currentPadding)+'px'
 }
 function carRight(){
     currentPadding=document.getElementsByClassName('progressBar')[0].style.paddingLeft;
-    currentPadding=currentPadding.slice(0,currentPadding.length-2)
+    currentPadding=+currentPadding.slice(0,currentPadding.length-2)
     currentPadding+=5;
 
 document.getElementsByClassName('progressBar')[0].style.paddingLeft=String(currentPadding)+'px'
