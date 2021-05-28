@@ -25,7 +25,7 @@ function addPlayer(id , name) {
 document.getElementById('tbody').innerHTML+=carHtml
 }
 function moveCar(id,positionPercentage){
-    document.getElementById(id).style.paddingLeft-=1;
+    document.getElementById(id).style.paddingLeft=String(positionPercentage)+'%';
 }
 function carLeft(){
     currentPadding=document.getElementsByClassName('progressBar')[0].style.paddingLeft;
